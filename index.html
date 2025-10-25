@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibestream - Music Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">🎵 Vibestream</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="browse">Browse</a></li>
+                    <li><a href="#" class="nav-link" data-page="playlists">Playlists</a></li>
+                    <li><a href="#" class="nav-link" data-page="library">Library</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="theme-selector">
+            <h2>Choose Your Vibe</h2>
+            <div class="theme-buttons">
+                <div class="theme-btn" data-theme="romance">
+                    <div class="theme-icon">🌹</div>
+                    <div class="theme-name">Romance</div>
+                </div>
+                <div class="theme-btn" data-theme="hiphop">
+                    <div class="theme-icon">🎤</div>
+                    <div class="theme-name">Hip-Hop</div>
+                </div>
+                <div class="theme-btn" data-theme="rock">
+                    <div class="theme-icon">🎸</div>
+                    <div class="theme-name">Rock</div>
+                </div>
+                <div class="theme-btn" data-theme="classical">
+                    <div class="theme-icon">🎻</div>
+                    <div class="theme-name">Classical</div>
+                </div>
+                <div class="theme-btn" data-theme="edm">
+                    <div class="theme-icon">🎧</div>
+                    <div class="theme-name">EDM</div>
+                </div>
+            </div>
+        </div>
+
+        <section id="home" class="page-section active">
+            <div class="welcome-banner">
+                <h1>Welcome to Vibestream</h1>
+                <p>Your ultimate music destination. Choose a theme and start exploring!</p>
+            </div>
+
+            <h2 class="section-title">Trending Now</h2>
+            <div class="music-grid">
+                <div class="music-card" onclick="playSong('Midnight Dreams', 'Luna Rose')">
+                    <div class="album-cover">🌙</div>
+                    <div class="music-title">Midnight Dreams</div>
+                    <div class="music-artist">Luna Rose</div>
+                </div>
+                <div class="music-card" onclick="playSong('Summer Vibes', 'DJ Sunny')">
+                    <div class="album-cover">☀️</div>
+                    <div class="music-title">Summer Vibes</div>
+                    <div class="music-artist">DJ Sunny</div>
+                </div>
+                <div class="music-card" onclick="playSong('Heartbeat', 'The Pulse')">
+                    <div class="album-cover">❤️</div>
+                    <div class="music-title">Heartbeat</div>
+                    <div class="music-artist">The Pulse</div>
+                </div>
+                <div class="music-card" onclick="playSong('Electric Soul', 'Neon Knights')">
+                    <div class="album-cover">⚡</div>
+                    <div class="music-title">Electric Soul</div>
+                    <div class="music-artist">Neon Knights</div>
+                </div>
+            </div>
+
+            <h2 class="section-title">Popular Artists</h2>
+            <div class="music-grid">
+                <div class="music-card" onclick="playSong('Best Of', 'Luna Rose')">
+                    <div class="album-cover">👤</div>
+                    <div class="music-title">Luna Rose</div>
+                    <div class="music-artist">Artist</div>
+                </div>
+                <div class="music-card" onclick="playSong('Greatest Hits', 'The Pulse')">
+                    <div class="album-cover">🎵</div>
+                    <div class="music-title">The Pulse</div>
+                    <div class="music-artist">Artist</div>
+                </div>
+                <div class="music-card" onclick="playSong('Top Tracks', 'Neon Knights')">
+                    <div class="album-cover">🌟</div>
+                    <div class="music-title">Neon Knights</div>
+                    <div class="music-artist">Artist</div>
+                </div>
+                <div class="music-card" onclick="playSong('Collection', 'DJ Sunny')">
+                    <div class="album-cover">🎧</div>
+                    <div class="music-title">DJ Sunny</div>
+                    <div class="music-artist">Artist</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="browse" class="page-section">
+            <h2 class="section-title">Browse by Genre</h2>
+            <div class="music-grid">
+                <div class="music-card" onclick="playSong('Romance Mix', 'Various Artists')">
+                    <div class="album-cover">🌹</div>
+                    <div class="music-title">Romance</div>
+                    <div class="music-artist">Love Songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Hip-Hop Beats', 'Various Artists')">
+                    <div class="album-cover">🎤</div>
+                    <div class="music-title">Hip-Hop</div>
+                    <div class="music-artist">Urban Beats</div>
+                </div>
+                <div class="music-card" onclick="playSong('Rock Anthems', 'Various Artists')">
+                    <div class="album-cover">🎸</div>
+                    <div class="music-title">Rock</div>
+                    <div class="music-artist">Heavy Riffs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Classical Symphony', 'Various Artists')">
+                    <div class="album-cover">🎻</div>
+                    <div class="music-title">Classical</div>
+                    <div class="music-artist">Orchestra</div>
+                </div>
+                <div class="music-card" onclick="playSong('EDM Festival', 'Various Artists')">
+                    <div class="album-cover">🎧</div>
+                    <div class="music-title">EDM</div>
+                    <div class="music-artist">Electronic</div>
+                </div>
+                <div class="music-card" onclick="playSong('Pop Hits', 'Various Artists')">
+                    <div class="album-cover">🎤</div>
+                    <div class="music-title">Pop</div>
+                    <div class="music-artist">Top Charts</div>
+                </div>
+                <div class="music-card" onclick="playSong('Jazz Standards', 'Various Artists')">
+                    <div class="album-cover">🎺</div>
+                    <div class="music-title">Jazz</div>
+                    <div class="music-artist">Smooth Jazz</div>
+                </div>
+                <div class="music-card" onclick="playSong('Country Roads', 'Various Artists')">
+                    <div class="album-cover">🤠</div>
+                    <div class="music-title">Country</div>
+                    <div class="music-artist">Nashville Hits</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="playlists" class="page-section">
+            <h2 class="section-title">Your Playlists</h2>
+            <div class="music-grid">
+                <div class="music-card" onclick="playSong('Chill Vibes', 'Playlist')">
+                    <div class="album-cover">😌</div>
+                    <div class="music-title">Chill Vibes</div>
+                    <div class="music-artist">32 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Workout Mix', 'Playlist')">
+                    <div class="album-cover">💪</div>
+                    <div class="music-title">Workout Mix</div>
+                    <div class="music-artist">45 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Road Trip', 'Playlist')">
+                    <div class="album-cover">🚗</div>
+                    <div class="music-title">Road Trip</div>
+                    <div class="music-artist">28 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Party Hits', 'Playlist')">
+                    <div class="album-cover">🎉</div>
+                    <div class="music-title">Party Hits</div>
+                    <div class="music-artist">50 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Focus Flow', 'Playlist')">
+                    <div class="album-cover">🧠</div>
+                    <div class="music-title">Focus Flow</div>
+                    <div class="music-artist">40 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Sleep Sounds', 'Playlist')">
+                    <div class="album-cover">😴</div>
+                    <div class="music-title">Sleep Sounds</div>
+                    <div class="music-artist">25 songs</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="library" class="page-section">
+            <h2 class="section-title">Your Library</h2>
+            <div class="music-grid">
+                <div class="music-card" onclick="playSong('Recent Plays', 'History')">
+                    <div class="album-cover">🕒</div>
+                    <div class="music-title">Recently Played</div>
+                    <div class="music-artist">Last 30 days</div>
+                </div>
+                <div class="music-card" onclick="playSong('Favorites', 'Collection')">
+                    <div class="album-cover">⭐</div>
+                    <div class="music-title">Liked Songs</div>
+                    <div class="music-artist">156 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Albums', 'Collection')">
+                    <div class="album-cover">💿</div>
+                    <div class="music-title">Your Albums</div>
+                    <div class="music-artist">24 albums</div>
+                </div>
+                <div class="music-card" onclick="playSong('Artists', 'Collection')">
+                    <div class="album-cover">🎤</div>
+                    <div class="music-title">Your Artists</div>
+                    <div class="music-artist">18 artists</div>
+                </div>
+                <div class="music-card" onclick="playSong('Downloads', 'Offline')">
+                    <div class="album-cover">📥</div>
+                    <div class="music-title">Downloads</div>
+                    <div class="music-artist">67 songs</div>
+                </div>
+                <div class="music-card" onclick="playSong('Podcasts', 'Collection')">
+                    <div class="album-cover">🎙️</div>
+                    <div class="music-title">Podcasts</div>
+                    <div class="music-artist">12 shows</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="player-bar">
+        <div class="player-content">
+            <div class="now-playing">
+                <div class="mini-cover" id="miniCover">🎵</div>
+                <div class="track-info">
+                    <div class="track-title" id="trackTitle">Select a song</div>
+                    <div class="track-artist" id="trackArtist">Start exploring</div>
+                </div>
+            </div>
+            <div class="player-controls">
+                <button class="control-btn" onclick="previousTrack()">⏮️</button>
+                <button class="control-btn play-btn" id="playBtn" onclick="togglePlay()">▶️</button>
+                <button class="control-btn" onclick="nextTrack()">⏭️</button>
+            </div>
+            <div class="progress-section">
+                <span class="time-display" id="currentTime">0:00</span>
+                <div class="progress-bar" onclick="seekTo(event)">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="time-display" id="totalTime">3:45</span>
+            </div>
+            <div class="volume-control">
+                <span>🔊</span>
+                <div class="volume-slider" onclick="setVolume(event)">
+                    <div class="volume-fill" id="volumeFill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
