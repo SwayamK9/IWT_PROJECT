@@ -1,3 +1,56 @@
+
+Home
+Travel
+Academic
+Sports
+Library
+C:\Users\ssmga\OneDrive\Documents\IWT\git\IWT_PROJECT>git init Reinitialized existing Git repository
+separate and link html,css,js and remove comments
+Project Goal & First Task with html,css,js Hello Team, Our project goal is to create a responsive mu
+[https://youtu.be/eqjbltfx55Y?si=AknxSpj5AsOiM9uQ](https://youtu.be/eqjbltfx55Y?si=AknxSpj5AsOiM9uQ)
+<SafeAreaView {ios?:style={{marginBottom:2}}:style{{marginBottom:3}}}> make this work
+why className is not working on my reactnative app
+I want to learn DSA with Java so how do I start with beginner level and I want to make it more pract
+[https://github.com/SwayamK9/YOKOSO](https://github.com/SwayamK9/YOKOSO) how can i change the theme
+how to push a project to github which is on my local device laptop
+find the source that says Indian astrology economy is if 40 thousand crores and globally it's of 2.2
+View All
+Home
+Discover
+Spaces
+Finance
+Account
+separate and link html,css,js and remove comments
+
+separate and link html,css,js and remove comments
+Python
+Python
+
+separate and remove comments
+
+Perfect! I've successfully separated your updated Vibestream file with real album covers into three linked files and removed all comments.
+
+​
+Created Files:
+
+    vibestream_real_covers.html (31,553 characters) - Clean HTML structure with proper links
+
+    style.css (11,126 characters) - All styling rules without comments
+
+    script.js (6,524 characters) - All JavaScript functionality without comments
+
+What was done:
+
+✅ Separated - Extracted all CSS from <style> tags into external style.css file
+✅ Separated - Extracted all JavaScript from <script> tags into external script.js file
+✅ Linked - Added <link rel="stylesheet" href="style.css"> to the HTML head
+✅ Linked - Added <script src="script.js"></script> before closing </body> tag
+✅ Cleaned - Removed all HTML comments (<!-- -->)
+✅ Cleaned - Removed all CSS comments (/* */)
+✅ Cleaned - Removed all JavaScript comments (// and /* */)
+Usage:
+
+Place all three files in the same directory and open vibestream_real_covers.html in your browser . The page will work perfectly with all the real album covers, themes, and functionality intact!
 const themeButtons = document.querySelectorAll('.theme-btn');
         const body = document.body;
 
@@ -34,16 +87,16 @@ const themeButtons = document.querySelectorAll('.theme-btn');
 
         let isPlaying = false;
         let currentProgress = 0;
-        let songDuration = 225;
+        let songDuration = 225; 
         let progressInterval;
 
-        function playSong(title, artist, coverUrl) {
+        function playSong(title, artist) {
             document.getElementById('trackTitle').textContent = title;
             document.getElementById('trackArtist').textContent = artist;
 
-            if (coverUrl) {
-                document.getElementById('miniCover').innerHTML = `<img src="${coverUrl}" alt="${title}">`;
-            }
+            const covers = ['🎵', '🎶', '🎧', '🎸', '🎹', '🎺', '🎻'];
+            const randomCover = covers[Math.floor(Math.random() * covers.length)];
+            document.getElementById('miniCover').textContent = randomCover;
 
             isPlaying = true;
             document.getElementById('playBtn').textContent = '⏸️';
@@ -56,7 +109,7 @@ const themeButtons = document.querySelectorAll('.theme-btn');
         function togglePlay() {
             isPlaying = !isPlaying;
             document.getElementById('playBtn').textContent = isPlaying ? '⏸️' : '▶️';
-
+            
             if (isPlaying) {
                 startProgress();
             } else {
@@ -65,12 +118,13 @@ const themeButtons = document.querySelectorAll('.theme-btn');
         }
 
         function startProgress() {
-            stopProgress();
+            stopProgress(); 
             progressInterval = setInterval(() => {
                 if (currentProgress < songDuration) {
                     currentProgress += 1;
                     updateProgress();
                 } else {
+                    
                     nextTrack();
                 }
             }, 1000);
@@ -100,7 +154,7 @@ const themeButtons = document.querySelectorAll('.theme-btn');
             const clickPosition = event.offsetX;
             const barWidth = progressBar.offsetWidth;
             const percentage = clickPosition / barWidth;
-
+            
             currentProgress = Math.floor(percentage * songDuration);
             updateProgress();
         }
@@ -110,38 +164,32 @@ const themeButtons = document.querySelectorAll('.theme-btn');
             const clickPosition = event.offsetX;
             const barWidth = volumeBar.offsetWidth;
             const percentage = (clickPosition / barWidth) * 100;
-
+            
             document.getElementById('volumeFill').style.width = percentage + '%';
         }
 
-        const allSongs = [
-            {title: 'Blinding Lights', artist: 'The Weeknd', cover: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&h=100&fit=crop', duration: 200},
-            {title: 'Perfect', artist: 'Ed Sheeran', cover: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100&h=100&fit=crop', duration: 263},
-            {title: 'Shallow', artist: 'Lady Gaga & Bradley Cooper', cover: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=100&h=100&fit=crop', duration: 216},
-            {title: 'First Person Shooter', artist: 'Drake ft. J. Cole', cover: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop', duration: 248},
-            {title: 'Like That', artist: 'Future, Metro Boomin, Kendrick Lamar', cover: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=100&h=100&fit=crop', duration: 267},
-            {title: 'Bones', artist: 'Imagine Dragons', cover: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&h=100&fit=crop', duration: 164},
-            {title: 'The Emptiness Machine', artist: 'Linkin Park', cover: 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=100&h=100&fit=crop', duration: 189},
-            {title: 'Clair de Lune', artist: 'Claude Debussy', cover: 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=100&h=100&fit=crop', duration: 300},
-            {title: 'Für Elise', artist: 'Ludwig van Beethoven', cover: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=100&h=100&fit=crop', duration: 175},
-            {title: 'Destiny', artist: 'Alesso & SACHA', cover: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100&h=100&fit=crop', duration: 190},
-            {title: 'Ocean', artist: 'Calvin Harris & Jessie Reyez', cover: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&h=100&fit=crop', duration: 207}
-        ];
-
-        let currentSongIndex = 0;
-
         function previousTrack() {
-            currentSongIndex = (currentSongIndex - 1 + allSongs.length) % allSongs.length;
-            const song = allSongs[currentSongIndex];
-            songDuration = song.duration;
-            playSong(song.title, song.artist, song.cover);
+            const titles = ['Yesterday', 'Memories', 'Throwback', 'Rewind'];
+            const artists = ['Classic Band', 'Retro Artist', 'Old School'];
+
+            songDuration = Math.floor(Math.random() * 120) + 150;
+            
+            playSong(
+                titles[Math.floor(Math.random() * titles.length)],
+                artists[Math.floor(Math.random() * artists.length)]
+            );
         }
 
         function nextTrack() {
-            currentSongIndex = (currentSongIndex + 1) % allSongs.length;
-            const song = allSongs[currentSongIndex];
-            songDuration = song.duration;
-            playSong(song.title, song.artist, song.cover);
+            const titles = ['Next Up', 'Coming Soon', 'Future Hits', 'New Wave'];
+            const artists = ['Rising Star', 'New Artist', 'Fresh Talent'];
+
+            songDuration = Math.floor(Math.random() * 120) + 150;
+            
+            playSong(
+                titles[Math.floor(Math.random() * titles.length)],
+                artists[Math.floor(Math.random() * artists.length)]
+            );
         }
 
         window.currentTheme = 'default';
