@@ -1,56 +1,3 @@
-
-Home
-Travel
-Academic
-Sports
-Library
-C:\Users\ssmga\OneDrive\Documents\IWT\git\IWT_PROJECT>git init Reinitialized existing Git repository
-separate and link html,css,js and remove comments
-Project Goal & First Task with html,css,js Hello Team, Our project goal is to create a responsive mu
-[https://youtu.be/eqjbltfx55Y?si=AknxSpj5AsOiM9uQ](https://youtu.be/eqjbltfx55Y?si=AknxSpj5AsOiM9uQ)
-<SafeAreaView {ios?:style={{marginBottom:2}}:style{{marginBottom:3}}}> make this work
-why className is not working on my reactnative app
-I want to learn DSA with Java so how do I start with beginner level and I want to make it more pract
-[https://github.com/SwayamK9/YOKOSO](https://github.com/SwayamK9/YOKOSO) how can i change the theme
-how to push a project to github which is on my local device laptop
-find the source that says Indian astrology economy is if 40 thousand crores and globally it's of 2.2
-View All
-Home
-Discover
-Spaces
-Finance
-Account
-separate and link html,css,js and remove comments
-
-separate and link html,css,js and remove comments
-Python
-Python
-
-separate and remove comments
-
-Perfect! I've successfully separated your updated Vibestream file with real album covers into three linked files and removed all comments.
-
-​
-Created Files:
-
-    vibestream_real_covers.html (31,553 characters) - Clean HTML structure with proper links
-
-    style.css (11,126 characters) - All styling rules without comments
-
-    script.js (6,524 characters) - All JavaScript functionality without comments
-
-What was done:
-
-✅ Separated - Extracted all CSS from <style> tags into external style.css file
-✅ Separated - Extracted all JavaScript from <script> tags into external script.js file
-✅ Linked - Added <link rel="stylesheet" href="style.css"> to the HTML head
-✅ Linked - Added <script src="script.js"></script> before closing </body> tag
-✅ Cleaned - Removed all HTML comments (<!-- -->)
-✅ Cleaned - Removed all CSS comments (/* */)
-✅ Cleaned - Removed all JavaScript comments (// and /* */)
-Usage:
-
-Place all three files in the same directory and open vibestream_real_covers.html in your browser . The page will work perfectly with all the real album covers, themes, and functionality intact!
 :root {
             
             --primary: #32a88d;
@@ -232,6 +179,7 @@ Place all three files in the same directory and open vibestream_real_covers.html
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
+            padding-bottom: 120px;
         }
 
         .page-section {
@@ -271,24 +219,20 @@ Place all three files in the same directory and open vibestream_real_covers.html
         .album-cover {
             width: 100%;
             aspect-ratio: 1;
-            background: var(--primary);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
             margin-bottom: 0.75rem;
-            opacity: 0.8;
+            object-fit: cover;
         }
 
         .music-title {
             font-weight: bold;
             color: var(--text);
             margin-bottom: 0.25rem;
+            font-size: 0.95rem;
         }
 
         .music-artist {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
         }
 
@@ -309,6 +253,7 @@ Place all three files in the same directory and open vibestream_real_covers.html
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 2rem;
         }
 
         .now-playing {
@@ -316,6 +261,7 @@ Place all three files in the same directory and open vibestream_real_covers.html
             display: flex;
             align-items: center;
             gap: 1rem;
+            min-width: 200px;
         }
 
         .mini-cover {
@@ -323,10 +269,13 @@ Place all three files in the same directory and open vibestream_real_covers.html
             height: 50px;
             background: var(--primary);
             border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
+            overflow: hidden;
+        }
+
+        .mini-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .track-info {
@@ -336,15 +285,15 @@ Place all three files in the same directory and open vibestream_real_covers.html
         .track-title {
             font-weight: bold;
             color: var(--text);
+            font-size: 0.9rem;
         }
 
         .track-artist {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
         }
 
         .player-controls {
-            flex: 1;
             display: flex;
             gap: 1rem;
             justify-content: center;
@@ -378,10 +327,10 @@ Place all three files in the same directory and open vibestream_real_covers.html
         }
 
         .volume-control {
-            flex: 1;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            min-width: 150px;
             justify-content: flex-end;
         }
 
@@ -445,6 +394,7 @@ Place all three files in the same directory and open vibestream_real_covers.html
         @media (max-width: 768px) {
             nav ul {
                 gap: 1rem;
+                font-size: 0.9rem;
             }
 
             .theme-buttons {
@@ -462,12 +412,25 @@ Place all three files in the same directory and open vibestream_real_covers.html
             }
 
             .player-content {
-                flex-direction: column;
+                flex-wrap: wrap;
                 gap: 1rem;
             }
 
-            .now-playing, .player-controls, .volume-control {
+            .now-playing {
                 width: 100%;
+            }
+
+            .progress-section {
+                width: 100%;
+                order: -1;
+            }
+
+            .player-controls {
+                flex: 1;
+            }
+
+            .volume-control {
+                flex: 1;
             }
         }
 
