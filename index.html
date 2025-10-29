@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibestream - Music Platform</title>
-    
+    <title>Vibestream - Your Music Destination</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <header>
         <div class="header-content">
             <div class="logo">🎵 Vibestream</div>
@@ -16,41 +14,41 @@
                 <ul>
                     <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
                     <li><a href="#" class="nav-link" data-page="browse">Browse</a></li>
-                    <li><a href="#" class="nav-link" data-page="playlists">Playlists</a></li>
                     <li><a href="#" class="nav-link" data-page="library">Library</a></li>
+                    <li><a href="#" class="nav-link" data-page="profile">Profile</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container">
-        
-        <div class="theme-selector">
-            <h2>Choose Your Vibe</h2>
-            <div class="theme-buttons">
-                <div class="theme-btn" data-theme="romance">
-                    <div class="theme-icon">🌹</div>
-                    <div class="theme-name">Romance</div>
-                </div>
-                <div class="theme-btn" data-theme="hiphop">
-                    <div class="theme-icon">🎤</div>
-                    <div class="theme-name">Hip-Hop</div>
-                </div>
-                <div class="theme-btn" data-theme="rock">
-                    <div class="theme-icon">🎸</div>
-                    <div class="theme-name">Rock</div>
-                </div>
-                <div class="theme-btn" data-theme="classical">
-                    <div class="theme-icon">🎻</div>
-                    <div class="theme-name">Classical</div>
-                </div>
-                <div class="theme-btn" data-theme="edm">
-                    <div class="theme-icon">🎧</div>
-                    <div class="theme-name">EDM</div>
-                </div>
+    <div class="theme-selector">
+        <h2>Choose Your Vibe</h2>
+        <div class="theme-buttons">
+            <div class="theme-btn" data-theme="romance">
+                <div class="theme-icon">💕</div>
+                <div class="theme-name">Romance</div>
+            </div>
+            <div class="theme-btn" data-theme="hiphop">
+                <div class="theme-icon">🎤</div>
+                <div class="theme-name">Hip-Hop</div>
+            </div>
+            <div class="theme-btn" data-theme="rock">
+                <div class="theme-icon">🎸</div>
+                <div class="theme-name">Rock</div>
+            </div>
+            <div class="theme-btn" data-theme="classical">
+                <div class="theme-icon">🎻</div>
+                <div class="theme-name">Classical</div>
+            </div>
+            <div class="theme-btn" data-theme="edm">
+                <div class="theme-icon">🎧</div>
+                <div class="theme-name">EDM</div>
             </div>
         </div>
+    </div>
 
+    <div class="container">
+        <!-- Home Page -->
         <section id="home" class="page-section active">
             <div class="welcome-banner">
                 <h1>Welcome to Vibestream</h1>
@@ -59,33 +57,33 @@
 
             <h2 class="section-title">Trending Now</h2>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Blinding Lights', 'The Weeknd', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop" alt="Blinding Lights" loading="lazy">
+                <div class="music-card" onclick="playSong('Blinding Lights', 'The Weeknd', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Blinding Lights</div>
                     <div class="music-artist">The Weeknd</div>
                 </div>
-                <div class="music-card" onclick="playSong('First Person Shooter', 'Drake ft. J. Cole', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="First Person Shooter" loading="lazy">
+                <div class="music-card" onclick="playSong('First Person Shooter', 'Drake ft. J. Cole', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">First Person Shooter</div>
                     <div class="music-artist">Drake ft. J. Cole</div>
                 </div>
-                <div class="music-card" onclick="playSong('Bones', 'Imagine Dragons', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=400&fit=crop" alt="Bones" loading="lazy">
+                <div class="music-card" onclick="playSong('Bones', 'Imagine Dragons', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Bones</div>
                     <div class="music-artist">Imagine Dragons</div>
                 </div>
-                <div class="music-card" onclick="playSong('Destiny', 'Alesso & SACHA', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop" alt="Destiny" loading="lazy">
+                <div class="music-card" onclick="playSong('Destiny', 'Alesso & SACHA', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Destiny</div>
                     <div class="music-artist">Alesso & SACHA</div>
                 </div>
-                <div class="music-card" onclick="playSong('Perfect', 'Ed Sheeran', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop" alt="Perfect" loading="lazy">
+                <div class="music-card" onclick="playSong('Perfect', 'Ed Sheeran', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Perfect</div>
                     <div class="music-artist">Ed Sheeran</div>
                 </div>
-                <div class="music-card" onclick="playSong('Clair de Lune', 'Claude Debussy', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop" alt="Clair de Lune" loading="lazy">
+                <div class="music-card" onclick="playSong('Clair de Lune', 'Claude Debussy', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Clair de Lune</div>
                     <div class="music-artist">Claude Debussy</div>
                 </div>
@@ -93,292 +91,525 @@
 
             <h2 class="section-title">Popular This Week</h2>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Like That', 'Future, Metro Boomin, Kendrick Lamar', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop" alt="Like That" loading="lazy">
+                <div class="music-card" onclick="playSong('Like That', 'Future, Metro Boomin, Kendrick Lamar', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Like That</div>
                     <div class="music-artist">Future, Metro Boomin, Kendrick Lamar</div>
                 </div>
-                <div class="music-card" onclick="playSong('Ocean', 'Calvin Harris & Jessie Reyez', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop" alt="Ocean" loading="lazy">
+                <div class="music-card" onclick="playSong('Ocean', 'Calvin Harris & Jessie Reyez', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Ocean</div>
                     <div class="music-artist">Calvin Harris & Jessie Reyez</div>
                 </div>
-                <div class="music-card" onclick="playSong('The Emptiness Machine', 'Linkin Park', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=400&fit=crop" alt="The Emptiness Machine" loading="lazy">
+                <div class="music-card" onclick="playSong('The Emptiness Machine', 'Linkin Park', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">The Emptiness Machine</div>
                     <div class="music-artist">Linkin Park</div>
                 </div>
-                <div class="music-card" onclick="playSong('Shallow', 'Lady Gaga & Bradley Cooper', 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop" alt="Shallow" loading="lazy">
+                <div class="music-card" onclick="playSong('Shallow', 'Lady Gaga & Bradley Cooper', 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Shallow</div>
                     <div class="music-artist">Lady Gaga & Bradley Cooper</div>
                 </div>
             </div>
         </section>
 
+        <!-- Browse Page -->
         <section id="browse" class="page-section">
             <h2 class="section-title">Browse by Genre</h2>
 
-            <h3 class="section-title" style="font-size: 1.5rem; margin-top: 2rem;">Romance</h3>
+            <h3 class="section-title">Romance</h3>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Blinding Lights', 'The Weeknd', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop" alt="Blinding Lights" loading="lazy">
+                <div class="music-card" onclick="playSong('Blinding Lights', 'The Weeknd', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Blinding Lights</div>
                     <div class="music-artist">The Weeknd</div>
                 </div>
-                <div class="music-card" onclick="playSong('Perfect', 'Ed Sheeran', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop" alt="Perfect" loading="lazy">
+                <div class="music-card" onclick="playSong('Perfect', 'Ed Sheeran', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Perfect</div>
                     <div class="music-artist">Ed Sheeran</div>
                 </div>
-                <div class="music-card" onclick="playSong('Shallow', 'Lady Gaga & Bradley Cooper', 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop" alt="Shallow" loading="lazy">
+                <div class="music-card" onclick="playSong('Shallow', 'Lady Gaga & Bradley Cooper', 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Shallow</div>
                     <div class="music-artist">Lady Gaga & Bradley Cooper</div>
                 </div>
-                <div class="music-card" onclick="playSong('Someone Like You', 'Adele', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Someone Like You" loading="lazy">
+                <div class="music-card" onclick="playSong('Someone Like You', 'Adele', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Someone Like You</div>
                     <div class="music-artist">Adele</div>
                 </div>
-                <div class="music-card" onclick="playSong('Thinking Out Loud', 'Ed Sheeran', 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop" alt="Thinking Out Loud" loading="lazy">
+                <div class="music-card" onclick="playSong('Thinking Out Loud', 'Ed Sheeran', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Thinking Out Loud</div>
                     <div class="music-artist">Ed Sheeran</div>
                 </div>
-                <div class="music-card" onclick="playSong('All of Me', 'John Legend', 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop" alt="All of Me" loading="lazy">
+                <div class="music-card" onclick="playSong('All of Me', 'John Legend', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">All of Me</div>
                     <div class="music-artist">John Legend</div>
                 </div>
             </div>
 
-            <h3 class="section-title" style="font-size: 1.5rem; margin-top: 2rem;">Hip-Hop</h3>
+            <h3 class="section-title">Hip-Hop</h3>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Squabble Up', 'Kendrick Lamar', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop" alt="Squabble Up" loading="lazy">
+                <div class="music-card" onclick="playSong('Squabble Up', 'Kendrick Lamar', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Squabble Up</div>
                     <div class="music-artist">Kendrick Lamar</div>
                 </div>
-                <div class="music-card" onclick="playSong('First Person Shooter', 'Drake ft. J. Cole', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="First Person Shooter" loading="lazy">
+                <div class="music-card" onclick="playSong('First Person Shooter', 'Drake ft. J. Cole', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">First Person Shooter</div>
                     <div class="music-artist">Drake ft. J. Cole</div>
                 </div>
-                <div class="music-card" onclick="playSong('Like That', 'Future, Metro Boomin, Kendrick Lamar', 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop" alt="Like That" loading="lazy">
+                <div class="music-card" onclick="playSong('Like That', 'Future, Metro Boomin, Kendrick Lamar', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Like That</div>
                     <div class="music-artist">Future, Metro Boomin, Kendrick Lamar</div>
                 </div>
-                <div class="music-card" onclick="playSong('Fe!n', 'Travis Scott ft. Playboi Carti', 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop" alt="Fe!n" loading="lazy">
+                <div class="music-card" onclick="playSong('Fe!n', 'Travis Scott ft. Playboi Carti', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Fe!n</div>
                     <div class="music-artist">Travis Scott ft. Playboi Carti</div>
                 </div>
-                <div class="music-card" onclick="playSong('Spin Bout U', 'Drake & 21 Savage', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Spin Bout U" loading="lazy">
+                <div class="music-card" onclick="playSong('Spin Bout U', 'Drake & 21 Savage', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Spin Bout U</div>
                     <div class="music-artist">Drake & 21 Savage</div>
                 </div>
-                <div class="music-card" onclick="playSong('Pushin P', 'Gunna & Future ft. Young Thug', 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop" alt="Pushin P" loading="lazy">
+                <div class="music-card" onclick="playSong('Pushin P', 'Gunna & Future ft. Young Thug', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Pushin P</div>
                     <div class="music-artist">Gunna & Future ft. Young Thug</div>
                 </div>
             </div>
 
-            <h3 class="section-title" style="font-size: 1.5rem; margin-top: 2rem;">Rock</h3>
+            <h3 class="section-title">Rock</h3>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('The Emptiness Machine', 'Linkin Park', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=400&fit=crop" alt="The Emptiness Machine" loading="lazy">
+                <div class="music-card" onclick="playSong('The Emptiness Machine', 'Linkin Park', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">The Emptiness Machine</div>
                     <div class="music-artist">Linkin Park</div>
                 </div>
-                <div class="music-card" onclick="playSong('Bones', 'Imagine Dragons', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=400&fit=crop" alt="Bones" loading="lazy">
+                <div class="music-card" onclick="playSong('Bones', 'Imagine Dragons', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Bones</div>
                     <div class="music-artist">Imagine Dragons</div>
                 </div>
-                <div class="music-card" onclick="playSong('Drum Show', 'Twenty One Pilots', 'https://images.unsplash.com/photo-1519508234439-4f23643125c1?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1519508234439-4f23643125c1?w=400&h=400&fit=crop" alt="Drum Show" loading="lazy">
+                <div class="music-card" onclick="playSong('Drum Show', 'Twenty One Pilots', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Drum Show</div>
                     <div class="music-artist">Twenty One Pilots</div>
                 </div>
-                <div class="music-card" onclick="playSong('Gods of Rock N Roll', 'Ozzy Osbourne & Billy Morrison', 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop" alt="Gods of Rock N Roll" loading="lazy">
+                <div class="music-card" onclick="playSong('Gods of Rock N Roll', 'Ozzy Osbourne & Billy Morrison', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Gods of Rock N Roll</div>
                     <div class="music-artist">Ozzy Osbourne & Billy Morrison</div>
                 </div>
-                <div class="music-card" onclick="playSong('Apologies', 'Three Days Grace', 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?w=400&h=400&fit=crop" alt="Apologies" loading="lazy">
+                <div class="music-card" onclick="playSong('Apologies', 'Three Days Grace', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Apologies</div>
                     <div class="music-artist">Three Days Grace</div>
                 </div>
-                <div class="music-card" onclick="playSong('Dreams on Toast', 'The Darkness', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Dreams on Toast" loading="lazy">
+                <div class="music-card" onclick="playSong('Dreams on Toast', 'The Darkness', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Dreams on Toast</div>
                     <div class="music-artist">The Darkness</div>
                 </div>
             </div>
 
-            <h3 class="section-title" style="font-size: 1.5rem; margin-top: 2rem;">Classical</h3>
+            <h3 class="section-title">Classical</h3>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Clair de Lune', 'Claude Debussy', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop" alt="Clair de Lune" loading="lazy">
+                <div class="music-card" onclick="playSong('Clair de Lune', 'Claude Debussy', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Clair de Lune</div>
                     <div class="music-artist">Claude Debussy</div>
                 </div>
-                <div class="music-card" onclick="playSong('Für Elise', 'Ludwig van Beethoven', 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=400&fit=crop" alt="Für Elise" loading="lazy">
+                <div class="music-card" onclick="playSong('Für Elise', 'Ludwig van Beethoven', 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Für Elise</div>
                     <div class="music-artist">Ludwig van Beethoven</div>
                 </div>
-                <div class="music-card" onclick="playSong('Canon in D', 'Johann Pachelbel', 'https://images.unsplash.com/photo-1519683109079-d5f539e1542f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1519683109079-d5f539e1542f?w=400&h=400&fit=crop" alt="Canon in D" loading="lazy">
+                <div class="music-card" onclick="playSong('Canon in D', 'Johann Pachelbel', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Canon in D</div>
                     <div class="music-artist">Johann Pachelbel</div>
                 </div>
-                <div class="music-card" onclick="playSong('Nocturne Op. 9 No. 2', 'Frédéric Chopin', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop" alt="Nocturne Op. 9 No. 2" loading="lazy">
+                <div class="music-card" onclick="playSong('Nocturne Op. 9 No. 2', 'Frédéric Chopin', 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Nocturne Op. 9 No. 2</div>
                     <div class="music-artist">Frédéric Chopin</div>
                 </div>
-                <div class="music-card" onclick="playSong('The Four Seasons: Spring', 'Antonio Vivaldi', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="The Four Seasons: Spring" loading="lazy">
+                <div class="music-card" onclick="playSong('The Four Seasons: Spring', 'Antonio Vivaldi', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">The Four Seasons: Spring</div>
                     <div class="music-artist">Antonio Vivaldi</div>
                 </div>
-                <div class="music-card" onclick="playSong('Symphony No. 5', 'Ludwig van Beethoven', 'https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=400&h=400&fit=crop" alt="Symphony No. 5" loading="lazy">
+                <div class="music-card" onclick="playSong('Symphony No. 5', 'Ludwig van Beethoven', 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Symphony No. 5</div>
                     <div class="music-artist">Ludwig van Beethoven</div>
                 </div>
             </div>
 
-            <h3 class="section-title" style="font-size: 1.5rem; margin-top: 2rem;">EDM</h3>
+            <h3 class="section-title">EDM</h3>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Blessings', 'Calvin Harris ft. Clementine Douglas', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop" alt="Blessings" loading="lazy">
+                <div class="music-card" onclick="playSong('Blessings', 'Calvin Harris ft. Clementine Douglas', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Blessings</div>
                     <div class="music-artist">Calvin Harris ft. Clementine Douglas</div>
                 </div>
-                <div class="music-card" onclick="playSong('Ocean', 'Calvin Harris & Jessie Reyez', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=400&fit=crop" alt="Ocean" loading="lazy">
+                <div class="music-card" onclick="playSong('Ocean', 'Calvin Harris & Jessie Reyez', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Ocean</div>
                     <div class="music-artist">Calvin Harris & Jessie Reyez</div>
                 </div>
-                <div class="music-card" onclick="playSong('Dust', 'Alan Walker & Robin Packalen', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Dust" loading="lazy">
+                <div class="music-card" onclick="playSong('Dust', 'Alan Walker & Robin Packalen', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Dust</div>
                     <div class="music-artist">Alan Walker & Robin Packalen</div>
                 </div>
-                <div class="music-card" onclick="playSong('Angels', 'Armin van Buuren & Punctual', 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&h=400&fit=crop" alt="Angels" loading="lazy">
+                <div class="music-card" onclick="playSong('Angels', 'Armin van Buuren & Punctual', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Angels</div>
                     <div class="music-artist">Armin van Buuren & Punctual</div>
                 </div>
-                <div class="music-card" onclick="playSong('Destiny', 'Alesso & SACHA', 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=400&h=400&fit=crop" alt="Destiny" loading="lazy">
+                <div class="music-card" onclick="playSong('Destiny', 'Alesso & SACHA', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Destiny</div>
                     <div class="music-artist">Alesso & SACHA</div>
                 </div>
-                <div class="music-card" onclick="playSong('Summer Skies', 'Lost Frequencies', 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&h=400&fit=crop" alt="Summer Skies" loading="lazy">
+                <div class="music-card" onclick="playSong('Summer Skies', 'Lost Frequencies', 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=100&h=100&fit=crop')">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Album Cover" class="album-cover">
                     <div class="music-title">Summer Skies</div>
                     <div class="music-artist">Lost Frequencies</div>
                 </div>
             </div>
         </section>
 
-        <section id="playlists" class="page-section">
+        <!-- Library Page -->
+        <section id="library" class="page-section">
             <h2 class="section-title">Your Playlists</h2>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Chill Vibes Playlist', '32 songs', 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop" alt="Chill Vibes" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=300&h=300&fit=crop" alt="Playlist Cover" class="album-cover">
                     <div class="music-title">Chill Vibes</div>
                     <div class="music-artist">32 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Workout Mix Playlist', '45 songs', 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&h=400&fit=crop" alt="Workout Mix" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=300&h=300&fit=crop" alt="Playlist Cover" class="album-cover">
                     <div class="music-title">Workout Mix</div>
                     <div class="music-artist">45 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Road Trip Playlist', '28 songs', 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&h=400&fit=crop" alt="Road Trip" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=300&h=300&fit=crop" alt="Playlist Cover" class="album-cover">
                     <div class="music-title">Road Trip</div>
                     <div class="music-artist">28 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Party Hits Playlist', '50 songs', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop" alt="Party Hits" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=300&h=300&fit=crop" alt="Playlist Cover" class="album-cover">
                     <div class="music-title">Party Hits</div>
                     <div class="music-artist">50 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Focus Flow Playlist', '40 songs', 'https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=400&h=400&fit=crop" alt="Focus Flow" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Playlist Cover" class="album-cover">
                     <div class="music-title">Focus Flow</div>
                     <div class="music-artist">40 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Sleep Sounds Playlist', '25 songs', 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&h=400&fit=crop" alt="Sleep Sounds" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?w=300&h=300&fit=crop" alt="Playlist Cover" class="album-cover">
                     <div class="music-title">Sleep Sounds</div>
                     <div class="music-artist">25 songs</div>
                 </div>
             </div>
-        </section>
 
-        <section id="library" class="page-section">
             <h2 class="section-title">Your Library</h2>
             <div class="music-grid">
-                <div class="music-card" onclick="playSong('Recent Plays', 'Last 30 days', 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=400&fit=crop" alt="Recently Played" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Recently Played</div>
                     <div class="music-artist">Last 30 days</div>
                 </div>
-                <div class="music-card" onclick="playSong('Favorites', '156 songs', 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=400&h=400&fit=crop" alt="Liked Songs" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Liked Songs</div>
                     <div class="music-artist">156 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Albums', '24 albums', 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop" alt="Your Albums" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Your Albums</div>
                     <div class="music-artist">24 albums</div>
                 </div>
-                <div class="music-card" onclick="playSong('Artists', '18 artists', 'https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=400&h=400&fit=crop" alt="Your Artists" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Your Artists</div>
                     <div class="music-artist">18 artists</div>
                 </div>
-                <div class="music-card" onclick="playSong('Downloads', '67 songs', 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop" alt="Downloads" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Downloads</div>
                     <div class="music-artist">67 songs</div>
                 </div>
-                <div class="music-card" onclick="playSong('Podcasts', '12 shows', 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=400&fit=crop')">
-                    <img class="album-cover" src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=400&h=400&fit=crop" alt="Podcasts" loading="lazy">
+                <div class="music-card">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Podcasts</div>
                     <div class="music-artist">12 shows</div>
                 </div>
             </div>
         </section>
+
+        <!-- Profile Page -->
+        <section id="profile" class="page-section">
+            <div class="profile-container">
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <div class="profile-avatar">
+                            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=200&h=200&fit=crop" alt="Profile Picture" id="profileImage">
+                        </div>
+                        <div class="profile-info" id="profileInfo">
+                            <h2 class="profile-name" id="profileName">Guest User</h2>
+                            <p class="profile-email" id="profileEmail">Please login to continue</p>
+                            <button class="login-btn" id="mainLoginBtn" onclick="showLoginPage()">Login</button>
+                        </div>
+                    </div>
+
+                    <div class="profile-stats" id="profileStats" style="display: none;">
+                        <div class="stat-item">
+                            <div class="stat-number">156</div>
+                            <div class="stat-label">Liked Songs</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Playlists</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">18</div>
+                            <div class="stat-label">Following</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">342</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                    </div>
+
+                    <div class="profile-actions" id="profileActions" style="display: none;">
+                        <button class="profile-btn" onclick="showEditProfile()">Edit Profile</button>
+                        <button class="profile-btn" onclick="showAccountSettings()">Account Settings</button>
+                        <button class="profile-btn logout-btn-profile" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+
+                <div class="profile-activity" id="profileActivity" style="display: none;">
+                    <h3 class="section-title">Recent Activity</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">🎵</div>
+                            <div class="activity-details">
+                                <div class="activity-text">Liked "Blinding Lights" by The Weeknd</div>
+                                <div class="activity-time">2 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📝</div>
+                            <div class="activity-details">
+                                <div class="activity-text">Created playlist "Workout Mix"</div>
+                                <div class="activity-time">5 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">👤</div>
+                            <div class="activity-details">
+                                <div class="activity-text">Started following Calvin Harris</div>
+                                <div class="activity-time">1 day ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">🎵</div>
+                            <div class="activity-details">
+                                <div class="activity-text">Played "Ocean" 15 times</div>
+                                <div class="activity-time">2 days ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeLoginPage()">&times;</span>
+            <div class="login-container">
+                <h2>Welcome Back to Vibestream</h2>
+                <p class="login-subtitle">Login to continue your musical journey</p>
+                
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Remember me</span>
+                        </label>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-btn google-btn" onclick="alert('Google login coming soon!')">
+                        <span>🔍</span> Continue with Google
+                    </button>
+                    <button class="social-btn facebook-btn" onclick="alert('Facebook login coming soon!')">
+                        <span>📘</span> Continue with Facebook
+                    </button>
+                </div>
+                
+                <p class="signup-link">
+                    Don't have an account? <a href="#" onclick="alert('Signup coming soon!')">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeEditProfile()">&times;</span>
+            <div class="login-container">
+                <h2>Edit Profile</h2>
+                <p class="login-subtitle">Update your profile information</p>
+                
+                <form id="editProfileForm" onsubmit="handleEditProfile(event)">
+                    <div class="form-group">
+                        <label for="editName">Full Name</label>
+                        <input type="text" id="editName" name="editName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" name="editEmail" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editBio">Bio</label>
+                        <textarea id="editBio" name="editBio" placeholder="Tell us about yourself" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="editLocation">Location</label>
+                        <input type="text" id="editLocation" name="editLocation" placeholder="City, Country">
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAccountSettings()">&times;</span>
+            <div class="login-container">
+                <h2>Account Settings</h2>
+                <p class="login-subtitle">Manage your account preferences</p>
+                
+                <form id="settingsForm" onsubmit="handleAccountSettings(event)">
+                    <div class="settings-section">
+                        <h3>Privacy Settings</h3>
+                        <div class="setting-item">
+                            <label class="remember-me">
+                                <input type="checkbox" id="publicProfile" checked>
+                                <span>Public Profile</span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label class="remember-me">
+                                <input type="checkbox" id="showActivity" checked>
+                                <span>Show Activity</span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label class="remember-me">
+                                <input type="checkbox" id="allowFollowers" checked>
+                                <span>Allow Followers</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h3>Notifications</h3>
+                        <div class="setting-item">
+                            <label class="remember-me">
+                                <input type="checkbox" id="emailNotif" checked>
+                                <span>Email Notifications</span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <label class="remember-me">
+                                <input type="checkbox" id="pushNotif" checked>
+                                <span>Push Notifications</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-section">
+                        <h3>Password</h3>
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" id="currentPassword" placeholder="Enter current password">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" id="newPassword" placeholder="Enter new password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Save Settings</button>
+                    <button type="button" class="submit-btn" style="background: #dc143c; margin-top: 10px;" onclick="deleteAccount()">Delete Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player Bar -->
     <div class="player-bar">
         <div class="player-content">
             <div class="now-playing">
-                <div class="mini-cover" id="miniCover">
-                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=100&h=100&fit=crop" alt="Now Playing">
-                </div>
+                <div class="mini-cover" id="miniCover">🎵</div>
                 <div class="track-info">
                     <div class="track-title" id="trackTitle">Select a song</div>
                     <div class="track-artist" id="trackArtist">Start exploring</div>
                 </div>
             </div>
+
             <div class="player-controls">
                 <button class="control-btn" onclick="previousTrack()">⏮️</button>
                 <button class="control-btn play-btn" id="playBtn" onclick="togglePlay()">▶️</button>
                 <button class="control-btn" onclick="nextTrack()">⏭️</button>
             </div>
+
             <div class="progress-section">
                 <span class="time-display" id="currentTime">0:00</span>
                 <div class="progress-bar" onclick="seekTo(event)">
@@ -386,6 +617,7 @@
                 </div>
                 <span class="time-display" id="totalTime">3:45</span>
             </div>
+
             <div class="volume-control">
                 <span>🔊</span>
                 <div class="volume-slider" onclick="setVolume(event)">
