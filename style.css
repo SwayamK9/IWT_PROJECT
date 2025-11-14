@@ -367,6 +367,73 @@ nav a:hover, nav a.active {
     color: white;
 }
 
+/* Profile Playlists */
+.profile-playlists {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+}
+
+.playlists-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.playlist-item {
+    background: var(--surface);
+    padding: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.playlist-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.playlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.playlist-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text);
+}
+
+.playlist-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.playlist-songs {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--card-bg);
+    display: none;
+}
+
+.playlist-songs.show {
+    display: block;
+}
+
+.playlist-song {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--card-bg);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
 .profile-activity {
     background: var(--card-bg);
     border-radius: 12px;
@@ -672,6 +739,174 @@ nav a:hover, nav a.active {
     border-radius: 8px;
 }
 
+/* Playlists List in Modal */
+.playlists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.playlist-option {
+    padding: 1rem;
+    background: var(--card-bg);
+    border: 2px solid var(--surface);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playlist-option:hover {
+    border-color: var(--primary);
+    transform: translateX(5px);
+}
+
+.playlist-option-name {
+    font-weight: bold;
+    color: var(--text);
+}
+
+.playlist-option-count {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Full Screen Player */
+.full-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--surface);
+    z-index: 999;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.full-player.active {
+    height: 100vh;
+}
+
+.full-player-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.close-player-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    background: var(--card-bg);
+    border: none;
+    color: var(--text);
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-player-btn:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.full-player-cover {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.full-player-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-player-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.full-player-info h2 {
+    font-size: 2rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.full-player-info p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.full-player-progress {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.full-player-controls {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.full-control-btn {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+}
+
+.full-control-btn:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+.play-btn-full {
+    font-size: 3rem;
+    background: var(--primary);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full-player-volume {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* Player Bar Styles */
 .player-bar {
     position: fixed;
@@ -682,6 +917,12 @@ nav a:hover, nav a.active {
     padding: 1rem 2rem;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
     transition: all 0.5s ease;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.player-bar:hover {
+    background: var(--card-bg);
 }
 
 .player-content {
@@ -919,5 +1160,28 @@ nav a:hover, nav a.active {
     .modal-content {
         width: 95%;
         padding: 1.5rem;
+    }
+
+    .full-player-cover {
+        width: 250px;
+        height: 250px;
+    }
+
+    .full-player-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .full-player-controls {
+        gap: 1rem;
+    }
+
+    .full-control-btn {
+        font-size: 1.5rem;
+    }
+
+    .play-btn-full {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5rem;
     }
 }
