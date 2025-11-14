@@ -335,7 +335,7 @@
                 <div class="music-card">
                     <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
                     <div class="music-title">Liked Songs</div>
-                    <div class="music-artist">156 songs</div>
+                    <div class="music-artist" id="likedSongsCount">0 songs</div>
                 </div>
                 <div class="music-card">
                     <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=300&fit=crop" alt="Library Item" class="album-cover">
@@ -377,11 +377,11 @@
 
                     <div class="profile-stats" id="profileStats" style="display: none;">
                         <div class="stat-item">
-                            <div class="stat-number">156</div>
+                            <div class="stat-number" id="likedSongsStatCount">0</div>
                             <div class="stat-label">Liked Songs</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">24</div>
+                            <div class="stat-number" id="playlistsCount">0</div>
                             <div class="stat-label">Playlists</div>
                         </div>
                         <div class="stat-item">
@@ -399,6 +399,12 @@
                         <button class="profile-btn" onclick="showAccountSettings()">Account Settings</button>
                         <button class="profile-btn logout-btn-profile" onclick="logout()">Logout</button>
                     </div>
+                </div>
+
+                <!-- User Playlists Section -->
+                <div class="profile-playlists" id="profilePlaylists" style="display: none;">
+                    <h3 class="section-title">Your Playlists</h3>
+                    <div id="userPlaylistsContainer" class="playlists-container"></div>
                 </div>
 
                 <div class="profile-activity" id="profileActivity" style="display: none;">
@@ -593,8 +599,86 @@
         </div>
     </div>
 
+    <!-- Add to Playlist Modal -->
+    <div id="playlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePlaylistModal()">&times;</span>
+            <div class="login-container">
+                <h2>Add to Playlist</h2>
+                <p class="login-subtitle">Choose a playlist or create a new one</p>
+                
+                <button class="submit-btn" style="margin-bottom: 1.5rem;" onclick="showCreatePlaylist()">+ Create New Playlist</button>
+                
+                <div id="playlistsList" class="playlists-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Playlist Modal -->
+    <div id="createPlaylistModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCreatePlaylist()">&times;</span>
+            <div class="login-container">
+                <h2>Create New Playlist</h2>
+                <p class="login-subtitle">Give your playlist a name</p>
+                
+                <form id="createPlaylistForm" onsubmit="handleCreatePlaylist(event)">
+                    <div class="form-group">
+                        <label for="playlistName">Playlist Name</label>
+                        <input type="text" id="playlistName" placeholder="My Awesome Playlist" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Create Playlist</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Player -->
+    <div id="fullPlayer" class="full-player">
+        <div class="full-player-content">
+            <button class="close-player-btn" onclick="closeFullPlayer()">
+                <span>▼</span>
+            </button>
+            
+            <div class="full-player-cover">
+                <img id="fullPlayerCover" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=500&h=500&fit=crop" alt="Album Cover">
+            </div>
+            
+            <div class="full-player-info">
+                <h2 id="fullPlayerTitle">Select a song</h2>
+                <p id="fullPlayerArtist">Start exploring</p>
+            </div>
+            
+            <div class="full-player-progress">
+                <span class="time-display" id="fullCurrentTime">0:00</span>
+                <div class="progress-bar" onclick="seekTo(event)">
+                    <div class="progress-fill" id="fullProgressFill"></div>
+                </div>
+                <span class="time-display" id="fullTotalTime">3:45</span>
+            </div>
+            
+            <div class="full-player-controls">
+                <button class="full-control-btn" id="likeBtn" onclick="toggleLike()">
+                    <span id="likeIcon">🤍</span>
+                </button>
+                <button class="full-control-btn" onclick="previousTrack()">⏮️</button>
+                <button class="full-control-btn play-btn-full" id="fullPlayBtn" onclick="togglePlay()">▶️</button>
+                <button class="full-control-btn" onclick="nextTrack()">⏭️</button>
+                <button class="full-control-btn" onclick="showPlaylistModal()">➕</button>
+            </div>
+            
+            <div class="full-player-volume">
+                <span>🔊</span>
+                <div class="volume-slider" onclick="setVolume(event)">
+                    <div class="volume-fill" id="fullVolumeFill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Player Bar -->
-    <div class="player-bar">
+    <div class="player-bar" onclick="openFullPlayer()">
         <div class="player-content">
             <div class="now-playing">
                 <div class="mini-cover" id="miniCover">🎵</div>
@@ -604,13 +688,17 @@
                 </div>
             </div>
 
-            <div class="player-controls">
+            <div class="player-controls" onclick="event.stopPropagation()">
+                <button class="control-btn" id="miniLikeBtn" onclick="toggleLike()">
+                    <span id="miniLikeIcon">🤍</span>
+                </button>
                 <button class="control-btn" onclick="previousTrack()">⏮️</button>
                 <button class="control-btn play-btn" id="playBtn" onclick="togglePlay()">▶️</button>
                 <button class="control-btn" onclick="nextTrack()">⏭️</button>
+                <button class="control-btn" onclick="showPlaylistModal()">➕</button>
             </div>
 
-            <div class="progress-section">
+            <div class="progress-section" onclick="event.stopPropagation()">
                 <span class="time-display" id="currentTime">0:00</span>
                 <div class="progress-bar" onclick="seekTo(event)">
                     <div class="progress-fill" id="progressFill"></div>
@@ -618,7 +706,7 @@
                 <span class="time-display" id="totalTime">3:45</span>
             </div>
 
-            <div class="volume-control">
+            <div class="volume-control" onclick="event.stopPropagation()">
                 <span>🔊</span>
                 <div class="volume-slider" onclick="setVolume(event)">
                     <div class="volume-fill" id="volumeFill"></div>
